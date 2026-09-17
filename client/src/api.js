@@ -4,7 +4,9 @@
 // Express serve o build do React e a API a partir da mesma origem, então
 // caminhos relativos funcionam nos dois casos.
 
-const BASE_URL = "/api";
+// import.meta.env.BASE_URL (não uma string fixa) porque em GitHub Pages
+// o site fica em um subpath, ex. /dashboard-flexibilidade-demo/api
+const BASE_URL = `${import.meta.env.BASE_URL}api`;
 
 async function getJson(path) {
   const res = await fetch(`${BASE_URL}${path}`);
