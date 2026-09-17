@@ -1,0 +1,83 @@
+{
+  "id": "valoracao",
+  "numero": 2,
+  "titulo": "Valoração da flexibilidade",
+  "tagline": "A flexibilidade prestada pelas hidrelétricas tem valor econômico relevante para o SIN e contribui para reduzir os custos de expansão e operação do sistema.",
+  "introducao": "O estudo estimou o valor econômico da flexibilidade prestada pelas hidrelétricas a partir dos custos adicionais de expansão e operação que o SIN teria caso essa flexibilidade fosse reduzida ou indisponível. Para isso, foram simulados diferentes cenários de contribuição das UHEs para o atendimento às rampas do sistema entre 2026 e 2030.",
+  "glossario": [
+    { "termo": "Envelope operativo (2022)", "definicao": "O padrão histórico de rampas das hidrelétricas observado em 2022, usado no estudo como referência do comportamento anterior à intensificação recente." },
+    { "termo": "CAPEX / OPEX", "definicao": "custos de investimento (CAPEX), como construção e expansão de usinas, e de operação (OPEX), como combustível de usinas térmicas. Juntos, compõem os custos de expansão e operação considerados no estudo." },
+    { "termo": "Valoração da flexibilidade hidrelétrica", "definicao": "estimativa do valor econômico da flexibilidade prestada pelas hidrelétricas ao SIN, obtida pela comparação dos custos de expansão e operação do sistema em cenários com diferentes níveis de contribuição das UHEs para o atendimento às rampas." }
+  ],
+  "kpis": [
+    { "label": "Valor econômico da flexibilidade hidrelétrica além do padrão observado em 2022", "valor": "R$ 108 bi", "contexto": "entre 2026 e 2030 (~R$ 21,6 bi/ano)", "tendencia": "positivo" },
+    { "label": "Valor econômico da flexibilidade hidrelétrica em relação ao cenário sem flexibilidade das UHEs", "valor": "R$ 264 bi", "contexto": "entre 2026 e 2030 (~R$ 52,8 bi/ano)", "tendencia": "positivo" },
+    { "label": "Valor econômico equivalente da flexibilidade", "valor": "~R$ 32/MWh", "contexto": "considerando o mercado projetado para 2026", "tendencia": "neutro" }
+  ],
+  "charts": {
+    "cenarios": {
+      "titulo": "Os quatro cenários simulados",
+      "descricao": "O modelo comparou os custos de expansão e operação do SIN sob diferentes formas de representação e disponibilidade da flexibilidade hidrelétrica.",
+      "itens": [
+        { "codigo": "Cen1", "nome": "Sem representação explícita das rampas", "descricao": "Planejamento da expansão sem considerar explicitamente as necessidades de rampa do sistema." },
+        { "codigo": "Cen2", "nome": "Com flexibilidade considerada", "descricao": "Planejamento considerando as restrições de flexibilidade e a capacidade de resposta das hidrelétricas (cenário de referência)." },
+        { "codigo": "Cen3", "nome": "Flexibilidade hidrelétrica indisponível", "descricao": "Simula a expansão e operação do SIN sem contar com a flexibilidade das hidrelétricas." },
+        { "codigo": "Cen4", "nome": "Hidrelétricas limitadas ao padrão de 2022", "descricao": "Limita as rampas hidrelétricas ao nível observado em 2022, antes da intensificação verificada nos anos seguintes." }
+      ]
+    },
+    "comparacaoCustos": {
+      "titulo": "Impacto da redução da flexibilidade hidrelétrica nos custos do sistema",
+      "descricao": "Aumento do custo total de expansão e operação do SIN em relação ao cenário de referência, entre 2026 e 2030.",
+      "series": [
+        { "comparacao": "Cen4 vs Cen2\n(padrão 2022 vs. flexibilidade atual)", "valorTotal": 108, "valorAnual": 21.6 },
+        { "comparacao": "Cen3 vs Cen2\n(sem flexibilidade vs. flexibilidade atual)", "valorTotal": 264, "valorAnual": 52.8 }
+      ]
+    },
+    "composicaoValorReferencia": {
+      "titulo": "Como foi obtido o valor equivalente de ~R$ 32/MWh",
+      "descricao": "O valor econômico estimado da flexibilidade hidrelétrica foi convertido em uma referência equivalente por unidade de energia, permitindo expressar a ordem de grandeza do benefício econômico em R$/MWh.",
+      "passos": [
+        { "rotulo": "Valor econômico anual da flexibilidade", "valor": "R$ 21,6 bilhões/ano", "detalhe": "diferença de custo entre os cenários 4 e 2 (2026–2030)" },
+        { "rotulo": "Rampas hidroelétricas observadas em 2025", "valor": "16.481.495 ΔMW/h", "detalhe": "esforço de rampa realizado pelas UHEs no ano" },
+        { "rotulo": "Valor econômico equivalente por unidade de rampa", "valor": "R$ 1.310 / ΔMW/h", "detalhe": "valor econômico anual dividido pelo esforço de rampa" },
+        { "rotulo": "Mercado projetado em 2026", "valor": "77.763 MWm", "detalhe": "carga total projetada do SIN" },
+        { "rotulo": "Valor de referência final", "valor": "~R$ 32/MWh", "detalhe": "custo sistêmico evitado médio equivalente" }
+      ]
+    }
+  },
+  "secoes": [
+    {
+      "titulo": "O que esse valor significa (e o que ele não significa)",
+      "tipo": "callout",
+      "texto": "Importante: o estudo não está dizendo que as hidrelétricas deveriam receber R$ 108 bilhões, nem que o consumidor vai pagar R$ 32 a mais por MWh. Esses números representam o custo sistêmico evitado, ou seja, o quanto o sistema deixaria de gastar com outras soluções (baterias, transmissão, térmicas) graças à flexibilidade que as hidrelétricas já entregam hoje."
+    },
+    {
+      "titulo": "Custo adicional ou redução de custos para o consumidor?",
+      "texto": "A criação de um mecanismo de remuneração para a flexibilidade introduz um custo explícito para sua contratação, que deve ser avaliado em conjunto com os custos sistêmicos que esse recurso pode evitar. A valoração realizada no estudo fornece uma referência para essa comparação, mas não determina o valor da remuneração a ser estabelecida."
+    },
+    {
+      "titulo": "Potenciais benefícios econômicos e operativos da flexibilidade hidrelétrica",
+      "tipo": "lista",
+      "itens": [
+        { "titulo": "Menor contratação de reserva de potência operativa (RPO)", "texto": "Reduz a dependência de mecanismos operativos adicionais para garantir segurança ao sistema." },
+        { "titulo": "Menor despacho fora da ordem de mérito", "texto": "Reduz o acionamento de recursos mais caros em situações operativas críticas." },
+        { "titulo": "Menos medidas corretivas pelo ONS", "texto": "Mais previsibilidade e menos intervenções operativas de última hora." },
+        { "titulo": "Melhor uso da infraestrutura existente", "texto": "Reduz a necessidade de investimentos adicionais em transmissão e reforços sistêmicos." },
+        { "titulo": "Menor corte de energia renovável", "texto": "Melhor aproveitamento da energia solar e eólica já gerada, reduzindo desperdício." },
+        { "titulo": "Menor risco de déficit de flexibilidade", "texto": "Mais robustez operativa diante do crescimento da variabilidade da carga líquida." }
+      ]
+    },
+    {
+      "titulo": "Como alocar os custos da flexibilidade?",
+      "subtitulo":"A criação de mecanismos de contratação e remuneração da flexibilidade também exige definir como os custos associados serão alocados entre os agentes do sistema. O estudo discute diferentes alternativas, que podem envolver encargos, sinais de preço ou uma combinação entre esses mecanismos.",
+      "tipo": "lista",
+      "itens": [
+        { "titulo": "Encargo sobre toda a carga", "texto": "Os custos são alocados entre os consumidores, sendo necessário definir o critério de rateio, por exemplo: energia consumida, demanda de ponta ou contribuição para a formação das rampas." },
+        { "titulo": "Encargo associado aos agentes que geram a necessidade de flexibilidade", "texto": "Os custos são alocados, na medida do possível, aos agentes que contribuem para a necessidade de flexibilidade, o que exige métricas capazes de identificar e mensurar essa contribuição." },
+        { "titulo": "Aprimoramento dos sinais do mercado de curto prazo", "texto": "Maior granularidade temporal dos preços de curto prazo pode melhorar a sinalização econômica dos momentos de maior necessidade de flexibilidade." },
+        { "titulo": "Combinação entre mercado e encargo", "texto": "Um modelo híbrido, unindo sinais de mercado de curto prazo com um encargo complementar para cobrir custos não capturados pelos preços." }
+      ]
+    }
+  ],
+  "conclusaoFinal": "A flexibilidade prestada pelas hidrelétricas possui valor econômico relevante para o SIN: sua redução ao padrão de 2022 ou sua indisponibilidade resultam em custos adicionais de expansão e operação de R$ 21,6 bilhões/ano e R$ 52,8 bilhões/ano, respectivamente. Esses resultados fornecem uma referência para o desenvolvimento de mecanismos de contratação e remuneração da flexibilidade."
+}

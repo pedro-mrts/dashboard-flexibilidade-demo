@@ -1,0 +1,79 @@
+{
+  "id": "diagnostico",
+  "numero": 1,
+  "titulo": "Diagnóstico da flexibilidade do SIN",
+  "tagline": "O SIN passou a exigir das hidrelétricas um nível de flexibilidade significativamente superior ao padrão histórico recente.",
+  "introducao": "O crescimento das fontes de geração variável, como a solar e a eólica, vem transformando a operação do SIN. As variações dessas fontes alteram o perfil da carga líquida e aumentam a necessidade de respostas rápidas dos recursos flexíveis do sistema. Nesse contexto, as hidrelétricas têm desempenhado papel central no atendimento às rampas. O estudo quantificou a evolução desse esforço e avaliou a suficiência da flexibilidade do SIN até 2030.",
+  "glossario": [
+    { "termo": "Flexibilidade operacional", "definicao": "Capacidade de um sistema elétrico de gerir, de forma confiável e economicamente eficiente, a variabilidade e a incerteza da demanda e da oferta em escala de tempo compatível com o despacho do Operador." },
+    { "termo": "Rampa", "definicao": "Quanto uma usina ou sistema precisa aumentar ou diminuir sua potência em um determinado período para acompanhar as variações da carga líquida. Rampas maiores exigem respostas mais intensas dos recursos flexíveis do sistema." },
+    { "termo": "Curva do pato", "definicao": "Formato assumido pela carga líquida ao longo do dia com elevada geração solar: a demanda atendida pelo sistema diminui nas horas de maior geração solar e aumenta rapidamente no fim da tarde, quando essa geração cai, criando rampas mais acentuadas." },
+    { "termo": "Carga líquida", "definicao": "Diferença entre a demanda de eletricidade e a geração das fontes renováveis variáveis, como solar e eólica, em determinado momento. É essa demanda remanescente que precisa ser atendida pelos demais recursos do sistema." },
+    { "termo": "Curtailment", "definicao": "Redução ou limitação da geração disponível, especialmente de fontes eólica e solar, devido a restrições ou necessidades operativas do sistema." },
+    { "termo": "IRRE", "definicao": "Expectância de Insuficiência de Recurso de Rampa: indica a probabilidade (%) de o sistema não ter flexibilidade suficiente para atender a uma necessidade de rampa." },
+    { "termo": "EDF", "definicao": "Expectativa de Déficit de Flexibilidade: indica magnitude da insuficiência de flexibilidade (em MW ou MW/h), quando ela ocorre." },
+    { "termo": "MMGD", "definicao": "Micro e Minigeração Distribuída: geração de energia elétrica realizada por pequenas unidades instaladas próximas ao local de consumo, como sistemas solares em residências, comércios e indústrias, conectadas à rede de distribuição." }
+  ],
+  "kpis": [
+    { "label": "Crescimento da rampa média de 1 hora entre 2022 e 2025", "valor": "+97%", "contexto": "no valor médio das rampas horárias do sistema", "tendencia": "alta" },
+    { "label": "Crescimento da rampa média de 4 horas entre 2022 e 2025", "valor": "+129%", "contexto": "no valor médio das rampas de 4 horas", "tendencia": "alta" },
+    { "label": "Rampa média das hidrelétricas em 2025", "valor": "23%", "contexto": "em relação à potência máxima, ante 15% em 2022.", "tendencia": "alta" },
+    { "label": "Maior risco anual de insuficiência (IRRE)", "valor": "0,068%", "contexto": "equivalente a cerca de 1 hora por ano entre 2026 e 2030", "tendencia": "neutro" },
+    { "label": "Déficit esperado de flexibilidade (EDF)", "valor": "até 3,9 GW", "contexto": "quando a insuficiência ocorre, nos cenários mais críticos", "tendencia": "alta" }
+  ],
+  "charts": {
+    "crescimentoRenovavel": {
+      "titulo": "A expansão das fontes renováveis variáveis está transformando a operação do SIN",
+      "descricao": "O crescimento da MMGD solar e das fontes renováveis variáveis vem alterando o perfil da carga líquida e intensificando as necessidades de rampa do sistema.",
+      "series": [
+        { "categoria": "MMGD solar instalada — 2023", "valor": 25, "unidade": "GW" },
+        { "categoria": "MMGD solar instalada — 2025", "valor": 46, "unidade": "GW" },
+        { "categoria": "Crescimento projetado de MMGD até 2035", "valor": 38, "unidade": "GW adicionais" }
+      ]
+    },
+    "evolucaoRampas": {
+      "titulo": "Evolução das rampas hidrelétricas no SIN (2022 → 2025)",
+      "descricao": "Comparação entre a rampa média e a rampa em situações severas (percentil 95), para janelas de 1 hora e de 4 horas.",
+      "series": [
+        { "janela": "Rampa de 1 hora", "metrica": "Média", "variacao": 97 },
+        { "janela": "Rampa de 1 hora", "metrica": "P95 (situações severas)", "variacao": 112 },
+        { "janela": "Rampa de 4 horas", "metrica": "Média", "variacao": 129 },
+        { "janela": "Rampa de 4 horas", "metrica": "P95 (situações severas)", "variacao": 117 }
+      ]
+    },
+    "metricasFlexibilidade": {
+      "titulo": "Como medir a flexibilidade do sistema",
+      "descricao": "O estudo combina diferentes métricas para avaliar a necessidade, a disponibilidade e os impactos econômicos da flexibilidade no SIN. Algumas podem ser diretamente monetizadas; outras funcionam como indicadores físicos ou de risco.",
+      "colunas": ["Métrica", "É monetizável?", "Unidade"],
+      "linhas": [
+        ["Variação do custo marginal de operação (CMO)", "Não, em sentido estrito", "R$/MWh"],
+        ["Curtailment (corte de geração renovável)", "Sim", "MW"],
+        ["Redução do custo total de operação", "Sim", "R$"],
+        ["Rampas de variação horária", "Não", "MW/h"],
+        ["IRRE — risco de insuficiência de rampa", "Não", "%"],
+        ["EDF — déficit esperado de flexibilidade", "Sim", "MW/h"]
+      ]
+    }
+  },
+  "secoes": [
+    {
+      "titulo": "O problema analisado",
+      "texto": "Diante do crescimento das fontes renováveis variáveis, o estudo avaliou se o SIN dispõe de flexibilidade suficiente para operar com segurança até 2030. Para isso, foram analisadas a evolução da carga líquida, as rampas operativas, a contribuição das hidrelétricas, as restrições à flexibilidade e os riscos de insuficiência."
+    },
+    {
+      "titulo": "O que os números mostram",
+      "texto": "O sistema elétrico brasileiro apresenta flexibilidade suficiente na maior parte do tempo. Entre 2026 e 2030, o maior risco anual de insuficiência de rampa (IRRE) é de 0,068%, equivalente a aproximadamente uma hora por ano. No entanto, em situações extremas de elevada penetração de fontes renováveis variáveis, podem ocorrer déficits pontuais de flexibilidade (EDF) de até 3,9 GW, evidenciando vulnerabilidades que precisam ser consideradas no planejamento e na operação do SIN."
+    },
+    {
+      "titulo": "O que o diagnóstico mostra",
+      "tipo": "lista",
+      "itens": [
+        { "titulo": "O curtailment atua como uma \"flexibilidade implícita\"", "texto": "O corte de geração eólica e solar ajuda a reduzir os desequilíbrios da carga líquida em determinados momentos, mas não resolve estruturalmente o descasamento temporal entre geração e consumo." },
+        { "titulo": "A capacidade de resposta das hidrelétricas é elevada, mas não permanente", "texto": "As hidrelétricas são o principal recurso de flexibilidade do SIN e chegam a atender rampas de até 15,3 GW/h. Essa capacidade, porém, depende das condições hidrológicas e operativas, reforçando a necessidade de diversificar os provedores de flexibilidade." },
+        { "titulo": "A disponibilidade de energia deve ser avaliada em conjunto com a flexibilidade", "texto": "Com o crescimento das fontes renováveis variáveis, o planejamento também precisa considerar se o sistema dispõe de recursos capazes de responder às variações da carga líquida na intensidade e no tempo necessários." },
+        { "titulo": "O desafio passa a envolver também a velocidade de resposta", "texto": "Além de garantir energia suficiente, o sistema precisa contar com recursos capazes de aumentar ou reduzir rapidamente sua potência. Isso amplia a importância das hidrelétricas, do armazenamento, da resposta da demanda e das térmicas flexíveis." }
+      ]
+    }
+  ],
+  "conclusaoFinal": "Os resultados indicam que o SIN dispõe de flexibilidade suficiente na maior parte do tempo, mas apresenta vulnerabilidades pontuais em situações extremas. Ao mesmo tempo, as hidrelétricas vêm atendendo rampas cada vez mais intensas e o curtailment tem atuado como uma forma implícita de flexibilidade. Esse cenário reforça a necessidade de incorporar explicitamente a flexibilidade ao planejamento e diversificar os recursos capazes de fornecê-la. O próximo passo consiste em estimar o valor econômico da flexibilidade fornecida pelas hidrelétricas ao SIN."
+}

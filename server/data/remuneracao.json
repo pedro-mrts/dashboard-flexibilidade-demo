@@ -1,0 +1,74 @@
+{
+  "id": "remuneracao",
+  "numero": 3,
+  "titulo": "Proposta de remuneração",
+  "tagline": "A proposta combina contratação por disponibilidade e acionamento, com tratamento específico para as hidrelétricas e competição entre os demais provedores de flexibilidade.",
+  "introducao": "A experiência internacional mostra diferentes mecanismos para contratação e remuneração da flexibilidade. A partir desse benchmark, o estudo propõe uma estrutura adaptada ao SIN, combinando competição entre recursos flexíveis com um tratamento específico para as hidrelétricas, considerando as características de seus contratos de concessão.",
+  "glossario": [
+    { "termo": "Envelope Operativo de Flexibilidade", "definicao": "faixa de flexibilidade que uma usina pode fornecer dentro de suas condições técnicas e operativas. Para as hidrelétricas, esse envelope delimita a flexibilidade considerada parte das obrigações da concessão e serve de referência para identificar eventual prestação adicional de flexibilidade." },
+    { "termo": "Neutralidade tecnológica", "definicao": "princípio que permite que diferentes recursos — como hidrelétricas, baterias, resposta da demanda e térmicas flexíveis — forneçam flexibilidade, desde que atendam aos requisitos técnicos estabelecidos para o produto." }
+  ],
+  "kpis": [
+    { "label": "Mercados internacionais analisados", "valor": "4", "contexto": "Estados Unidos (CAISO), Austrália (AEMO), Reino Unido (NESO) e Chile", "tendencia": "neutro" },
+    { "label": "Componentes de remuneração", "valor": "2", "contexto": "Disponibilidade e acionamento", "tendencia": "positivo" },
+    { "label": "Produtos de flexibilidade propostos", "valor": "4", "contexto": "Estrutural, Operativa Up, Operativa Down e Mercado Complementar", "tendencia": "neutro" }
+  ],
+  "charts": {
+    "benchmarkInternacional": {
+      "titulo": "Como outros países remuneram a flexibilidade",
+      "descricao": "Experiências distintas que apresentam elementos comuns relevantes para o desenho proposto para o SIN.",
+      "linhas": [
+        { "pais": "Estados Unidos (CAISO)", "produto": "FlexRamp Product", "atributo": "Capacidade de rampa reservada", "detalhe": "Garante capacidade de rampa futura, com foco em variabilidade e incerteza de previsão." },
+        { "pais": "Austrália (AEMO — WEM)", "produto": "Flexible Capacity", "atributo": "Disponibilidade", "detalhe": "Assegura recursos flexíveis suficientes para o futuro, capazes de ligar, desligar e fazer rampas rapidamente." },
+        { "pais": "Reino Unido (NESO)", "produto": "Dynamic Services (DC/DM/DR)", "atributo": "Disponibilidade e desempenho", "detalhe": "Serviços de resposta dinâmica e rápida, com mercados de resiliência operativa de médio e longo prazo." },
+        { "pais": "Chile", "produto": "Reserva Rápida", "atributo": "Disponibilidade e ativação", "detalhe": "Garante resposta rápida e balanceamento do sistema em tempo real." }
+      ],
+      "elementosComuns": ["Remuneração da disponibilidade", "Possibilidade de empilhamento de receitas", "Neutralidade tecnológica", "Competição entre recursos flexíveis", "Participação de baterias e resposta da demanda"]
+    },
+    "produtos": {
+      "titulo": "Os quatro produtos de flexibilidade propostos para o Brasil",
+      "texto": "A proposta separa a contratação antecipada da disponibilidade de recursos flexíveis do seu acionamento próximo à operação, organizando a flexibilidade em quatro produtos complementares.",
+      "itens": [
+        { "codigo": "A", "nome": "Flexibilidade Estrutural", "horizonte": "Anual / plurianual", "pagamento": "Disponibilidade", "unidade": "R$/MW-mês", "objetivo": "Garantir a existência futura de recursos flexíveis." },
+        { "codigo": "B", "nome": "Flexibilidade Operativa Up", "horizonte": "Semanal (ideal: D-1)", "pagamento": "Acionamento", "unidade": "R$/MWh", "objetivo": "Atender rampas ascendentes (aumento rápido de geração)." },
+        { "codigo": "C", "nome": "Flexibilidade Operativa Down", "horizonte": "Semanal (ideal: D-1)", "pagamento": "Acionamento", "unidade": "R$/MWh", "objetivo": "Atender rampas descendentes (redução rápida de geração)." },
+        { "codigo": "D", "nome": "Mercado Complementar", "horizonte": "Diário / tempo real", "pagamento": "Acionamento", "unidade": "R$/MWh", "objetivo": "Atender rampas remanescentes, de curtíssimo prazo." }
+      ]
+    }
+  },
+  "secoes": [
+    {
+      "titulo": "Tratamento dos diferentes provedores de flexibilidade",
+      "texto": "A proposta diferencia o tratamento das hidrelétricas e dos demais provedores de flexibilidade em função das características regulatórias e contratuais das UHEs, cujas concessões já incorporam determinadas obrigações operativas."
+    },
+    {
+      "titulo": "Como funciona para as hidrelétricas",
+      "tipo": "lista",
+      "itens": [
+        { "titulo": "Tratamento regulado para as hidrelétricas", "texto": "O ONS valida um envelope operativo de flexibilidade específico para cada usina, considerando suas características técnicas e operativas." },
+        { "titulo": "Flexibilidade compreendida no envelope operativo", "texto": "A flexibilidade compreendida nesse envelope é considerada parte das obrigações associadas à concessão e não recebe remuneração adicional." },
+        { "titulo": "Flexibilidade adicional ao envelope operativo", "texto": "Quando solicitado um nível de flexibilidade superior ao envelope definido, a prestação adicional é remunerada por um Preço de Provimento regulado." }
+      ]
+    },
+    {
+      "titulo": "Contratação dos demais provedores de flexibilidade",
+      "texto": "Baterias, resposta da demanda, térmicas flexíveis e outros recursos elegíveis competem por meio de mecanismos competitivos, desde que atendam aos requisitos técnicos definidos para o produto.",
+      "tipo": "lista",
+      "itens": [
+        { "titulo": "Contratação por leilão competitivo, em duas camadas", "texto": "Um Leilão de Disponibilidade anual (contratos de até ~5 anos, com preço-teto) garante receita fixa; um leilão \"week-ahead\"/\"day-ahead\" cobre necessidades adicionais identificadas perto da operação, com receita variável por acionamento." },
+        { "titulo": "Neutralidade tecnológica entre as opções", "texto": "Resposta da demanda, baterias e térmicas flexíveis competem em igualdade de condições nos dois leilões, uma vez definidos os atributos técnicos exigidos." },
+        { "titulo": "Os resultados dos leilões fornecem referência para o Preço de Provimento das hidrelétricas", "texto": "A hidrelétrica não disputa o leilão das demais tecnologias, mas o valor de referência pago a ela é balizado pelo resultado desses leilões — e não o contrário." }
+      ]
+    },
+    {
+      "titulo": "Princípio de não sobreposição",
+      "tipo": "callout",
+      "texto": "Recursos já remunerados pela disponibilidade estrutural podem participar dos mecanismos de curto prazo, mas a capacidade já contratada não recebe uma nova remuneração pela mesma disponibilidade. O acionamento, quando aplicável, é remunerado conforme as regras do produto operativo."
+    },
+    {
+      "titulo": "O que a experiência internacional ensina",
+      "texto": "A experiência internacional indica princípios recorrentes no desenho de mercados de flexibilidade: remuneração da disponibilidade, pagamento pelo acionamento, competição entre tecnologias e possibilidade de combinação de diferentes fontes de receita. A aplicação desses princípios deve considerar as características específicas de cada sistema elétrico."
+    }
+  ],
+  "conclusaoFinal": "A proposta combina remuneração pela disponibilidade e pelo acionamento da flexibilidade, promovendo competição entre diferentes recursos e reconhecendo as particularidades regulatórias das hidrelétricas. A separação entre produtos estruturais e operativos permite contratar a flexibilidade em diferentes horizontes, evitando a sobreposição de pagamentos."
+}

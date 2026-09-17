@@ -1,0 +1,150 @@
+{
+  "id": "politicas",
+  "numero": 6,
+  "titulo": "Recomendações e plano de implementação",
+  "tagline": "Transformar os resultados técnicos em aprimoramentos regulatórios requer uma implementação gradual e coordenada, com etapas, responsabilidades e mecanismos de acompanhamento claramente definidos.",
+  "introducao": "As cinco frentes técnicas do estudo — diagnóstico, valoração, remuneração, Unit Commitment Hidráulico e serviços ancilares — foram consolidadas em 12 recomendações regulatórias e em um plano de implementação estruturado em quatro fases, concebido para avançar de forma gradual, coordenada entre as instituições e continuamente monitorada.",
+  "glossario": [
+    { "termo": "MME", "definicao": "Ministério de Minas e Energia — define as diretrizes de política energética do país." },
+    { "termo": "ANEEL", "definicao": "Agência Nacional de Energia Elétrica — o órgão regulador do setor elétrico brasileiro." },
+    { "termo": "ONS", "definicao": "Operador Nacional do Sistema Elétrico — responsável pela operação em tempo real do sistema elétrico brasileiro." },
+    { "termo": "CCEE", "definicao": "Câmara de Comercialização de Energia Elétrica — administra o mercado de energia, incluindo contabilização e liquidação financeira." },
+    { "termo": "EPE", "definicao": "Empresa de Pesquisa Energética — responsável pelo planejamento de longo prazo do setor elétrico brasileiro." }
+  ],
+  "kpis": [
+    { "label": "Recomendações regulatórias", "valor": "12", "contexto": "Abrangendo mensuração, contratação, remuneração, participação dos provedores e governança.", "tendencia": "neutro" },
+    { "label": "Fases do roadmap de implementação", "valor": "4", "contexto": "Da preparação institucional e metodológica à consolidação e ao aprimoramento contínuo.", "tendencia": "neutro" },
+    { "label": "Frentes estratégicas de implementação", "valor": "5", "contexto": "Desenvolvidas de forma coordenada ao longo das etapas de implementação.", "tendencia": "neutro" },
+    { "label": "Grupos de instituições e agentes envolvidos", "valor": "6", "contexto": "MME, ONS, ANEEL, CCEE, EPE e agentes prestadores do serviço", "tendencia": "neutro" }
+  ],
+  "charts": {
+    "lacunas": {
+      "titulo": "Principais lacunas identificadas no arcabouço atual",
+      "itens": [
+        { "categoria": "Quantificação e Requisito", "problema": "O SIN ainda não dispõe de um requisito sistêmico explícito de flexibilidade associado a critérios formais para avaliar sua suficiência." },
+        { "categoria": "Contratação", "problema": "Não há um mecanismo específico e estruturado para contratação da flexibilidade, contemplando necessidades estruturais e de curto prazo." },
+        { "categoria": "Remuneração", "problema": "A flexibilidade ainda não possui um mecanismo específico de valoração e remuneração; no caso das UHEs, não há diferenciação explícita entre a flexibilidade compreendida nas obrigações existentes e uma eventual prestação adicional." },
+        { "categoria": "Participação e Alocação", "problema": "É necessário aprimorar os critérios para participação de diferentes provedores de flexibilidade e para a alocação dos custos e benefícios associados aos mecanismos propostos." }
+      ]
+    },
+    "recomendacoes": {
+      "titulo": "As 12 recomendações regulatórias",
+      "itens": [
+        { "numero": 1, "titulo": "Instituir um requisito de flexibilidade para o SIN", "texto": "Definir, por meio de simulações probabilísticas, quanto de flexibilidade o sistema realmente precisa." },
+        { "numero": 2, "titulo": "Estruturar mecanismos de contratação da flexibilidade", "texto": "Combinar uma dimensão estrutural (disponibilidade futura) com uma dimensão operativa (resposta a necessidades conjunturais)." },
+        { "numero": 3, "titulo": "Estruturar a remuneração dos serviços de flexibilidade", "texto": "Combinar receita fixa por disponibilidade (longo prazo) e receita variável por acionamento (curto prazo), sem sobreposição." },
+        { "numero": 4, "titulo": "Definir os produtos para contratação de flexibilidade", "texto": "Padronizar quatro produtos, diferenciados por horizonte, direção da rampa e natureza da necessidade." },
+        { "numero": 5, "titulo": "Definir penalidades para os produtos de flexibilidade", "texto": "Aplicar penalidades proporcionais à gravidade, recorrência e impacto do não cumprimento." },
+        { "numero": 6, "titulo": "Promover neutralidade tecnológica", "texto": "Definir os atributos técnicos exigidos, e não a tecnologia, permitindo competição entre UHEs, baterias, resposta da demanda e outros recursos." },
+        { "numero": 7, "titulo": "Diferenciar flexibilidade inerente e adicional das UHEs", "texto": "Definir um Envelope Operativo de Referência: só o que ultrapassa esse envelope é remunerado como serviço adicional." },
+        { "numero": 8, "titulo": "Definir a governança do mecanismo de flexibilidade", "texto": "Estabelecer atribuições claras entre planejamento, operação, regulação e liquidação." },
+        { "numero": 9, "titulo": "Estabelecer critérios de alocação de custos e benefícios", "texto": "Equilibrar causalidade (quem gera a necessidade), benefício sistêmico, eficiência e equidade." },
+        { "numero": 10, "titulo": "Aprimorar a representação operativa nos modelos de despacho", "texto": "Tornar o DESSEM mais aderente à operação real das usinas, reduzindo desvios entre o planejado e o observado." },
+        { "numero": 11, "titulo": "Incorporar riscos climáticos na avaliação da flexibilidade", "texto": "Considerar cenários climáticos futuros, e não apenas o comportamento histórico, no dimensionamento dos requisitos." },
+        { "numero": 12, "titulo": "Aprimorar a valoração e remuneração dos serviços ancilares", "texto": "Reconhecer disponibilidade, acionamento e desempenho, com abertura para novos provedores tecnicamente habilitados." }
+      ]
+    },
+    "roadmap": {
+      "titulo": "Roadmap de implementação em quatro fases",
+      "fases": [
+        {
+          "fase": 1,
+          "nome": "Preparação Institucional e Metodológica",
+          "prazo": "Curto prazo",
+          "objetivo": "Estabelecer as bases para a implementação.",
+          "acoes": ["Definir métricas e metodologia de quantificação", "Aprimorar dados e modelos", "Definir governança e responsabilidades"],
+          "marco": "Bases técnicas e institucionais estabelecidas."
+        },
+        {
+          "fase": 2,
+          "nome": "Desenvolvimento Regulatório e Testes",
+          "prazo": "Curto–médio prazo",
+          "objetivo": "Desenvolver e validar os mecanismos propostos.",
+          "acoes": ["Definir produtos e requisitos técnicos", "Estruturar contratação e remuneração", "Realizar simulações e testes"],
+          "marco": "Mecanismos desenvolvidos e validados."
+        },
+        {
+          "fase": 3,
+          "nome": "Implementação Gradual",
+          "prazo": "Médio prazo",
+          "objetivo": "Introduzir progressivamente os novos mecanismos.",
+          "acoes": ["Regulamentar os mecanismos", "Adequar procedimentos e sistemas", "Habilitar e contratar provedores"],
+          "marco": "Mecanismos em operação."
+        },
+        {
+          "fase": 4,
+          "nome": "Consolidação e Aprimoramento",
+          "prazo": "Médio–longo prazo",
+          "objetivo": "Avaliar resultados e consolidar o novo arcabouço.",
+          "acoes": ["Avaliar desempenho técnico e econômico", "Revisar requisitos e parâmetros", "Aperfeiçoar produtos e remuneração"],
+          "marco": "Arcabouço consolidado, sujeito a revisão periódica."
+        }
+      ]
+    },
+    "governanca": {
+      "titulo": "Governança proposta para a gestão da flexibilidade",
+      "itens": [
+        { "instituicao": "MME", "papel": "Diretrizes de política energética", "responsabilidades": ["Direcionamento estratégico", "Políticas e mecanismos de contratação"] },
+        { "instituicao": "ONS", "papel": "Operação", "responsabilidades": ["Necessidades e requisitos operativos", "Acionamento e avaliação de desempenho"] },
+        { "instituicao": "ANEEL", "papel": "Regulação", "responsabilidades": ["Regulamentação dos mecanismos", "Remuneração, penalidades e alocação"] },
+        { "instituicao": "CCEE", "papel": "Mercado e contabilização", "responsabilidades": ["Regras de comercialização", "Registro, contabilização e liquidação"] },
+        { "instituicao": "EPE", "papel": "Planejamento", "responsabilidades": ["Avaliação prospectiva das necessidades", "Incorporação ao planejamento"] },
+        { "instituicao": "Agentes", "papel": "Prestação dos serviços", "responsabilidades": ["Habilitação dos recursos", "Oferta e atendimento aos requisitos"] }
+      ]
+    },
+    "monitoramento": {
+      "titulo": "Três níveis de indicadores de acompanhamento",
+      "itens": [
+        { "nivel": "Implementação", "foco": "Execução do roadmap", "exemplos": ["Cumprimento dos marcos por fase", "Entregas técnicas concluídas", "Evolução regulatória (aprovação de instrumentos)"] },
+        { "nivel": "Desempenho", "foco": "Funcionamento dos mecanismos", "exemplos": ["Disponibilidade contratada", "Taxa de atendimento das solicitações", "Custo da flexibilidade"] },
+        { "nivel": "Resultado Sistêmico", "foco": "Efetividade para o SIN", "exemplos": ["IRRE / EDF", "Requisito × disponível", "Déficits observados na operação"] }
+      ]
+    },
+    "riscos": {
+      "titulo": "Riscos de implementação e como mitigá-los",
+      "linhas": [
+        { "risco": "Incerteza metodológica", "impacto": "Dimensionamento inadequado dos requisitos", "mitigacao": "Testes, calibração e revisão periódica" },
+        { "risco": "Limitações de dados e modelos", "impacto": "Baixa aderência às condições reais", "mitigacao": "Aprimoramento progressivo de dados" },
+        { "risco": "Complexidade regulatória", "impacto": "Atrasos ou inconsistências", "mitigacao": "Implementação faseada e coordenada" },
+        { "risco": "Coordenação institucional", "impacto": "Sobreposição ou lacunas de execução", "mitigacao": "Papéis e marcos claramente definidos" },
+        { "risco": "Impactos econômicos", "impacto": "Custos excessivos ou sinais inadequados", "mitigacao": "Avaliação de custos e implementação gradual" }
+      ]
+    },
+    "impactosEsperados": {
+      "titulo": "Resultados esperados com a implementação das recomendações",
+      "itens": [
+        { "publico": "Sistema Elétrico", "foco": "Segurança e eficiência operativa", "beneficios": ["Menor risco de insuficiência de flexibilidade", "Maior capacidade de integração de renováveis", "Melhor aproveitamento dos recursos existentes", "Menos medidas corretivas emergenciais"] },
+        { "publico": "Mercado de Energia", "foco": "Sinais econômicos e competição", "beneficios": ["Reconhecimento econômico da flexibilidade", "Sinais para preservar e expandir recursos flexíveis", "Competição entre tecnologias", "Incentivo à entrada de novos provedores"] },
+        { "publico": "Agentes e Consumidores", "foco": "Alocação eficiente de custos e benefícios", "beneficios": ["Remuneração compatível com o serviço prestado", "Mais previsibilidade para investimentos", "Critérios transparentes de rateio", "Potencial redução de custos sistêmicos"] }
+      ]
+    }
+  },
+  "secoes": [
+    {
+      "titulo": "Da recomendação à implementação",
+      "texto": "A implementação segue uma cadeia coordenada: primeiro se fundamenta (métricas, dados, modelos), depois se estrutura (produtos, contratação, remuneração), em seguida se testa (simulações e projetos-piloto), então se implementa (regulamentação e participação progressiva) e, por fim, se avalia e aprimora continuamente — com governança institucional, dados e ferramentas, integração planejamento-operação e participação dos agentes perpassando todas as etapas."
+    },
+    {
+      "titulo": "Cinco frentes estratégicas desenvolvidas de forma coordenada",
+      "texto": "Quantificação e Planejamento, Modelagem e Operação, Contratação e Remuneração, UHEs e Serviços Sistêmicos e Governança e Alocação avançam de forma coordenada ao longo das quatro fases, desde a preparação técnica e institucional até o monitoramento e aprimoramento dos mecanismos implementados."
+    },
+    {
+      "titulo": "Um roadmap adaptativo",
+      "tipo": "callout",
+      "texto": "O roadmap não representa uma trajetória fixa. Sua evolução deve considerar os resultados observados durante a implementação e as transformações técnicas, econômicas e regulatórias do setor. Ações independentes podem avançar em paralelo, desde que seus respectivos pré-requisitos estejam atendidos."
+    },
+    {
+      "titulo": "Considerações finais do estudo",
+      "tipo": "lista",
+      "itens": [
+        { "titulo": "Implementação gradual", "texto": "As recomendações têm diferentes níveis de maturidade e dependências — não é recomendável implementar tudo de uma vez, nem isoladamente." },
+        { "titulo": "Consolidação das bases técnicas como ponto de partida", "texto": "Métricas, requisitos e modelos consolidados são pré-requisito para desenhar bons mecanismos." },
+        { "titulo": "Coordenação institucional", "texto": "Planejamento, regulação, operação e mercado precisam se articular, respeitando as competências de cada um." },
+        { "titulo": "Validação prévia dos mecanismos", "texto": "Validar previamente os mecanismos permite corrigir distorções antes de ampliar sua aplicação." },
+        { "titulo": "Monitoramento dos resultados sistêmicos", "texto": "É preciso verificar se os mecanismos realmente atendem às necessidades do sistema, e não apenas se as etapas foram cumpridas." },
+        { "titulo": "Aprimoramento contínuo do roadmap", "texto": "A evolução do sistema, das tecnologias e do mercado pode exigir revisão dos requisitos e parâmetros ao longo do tempo." }
+      ]
+    }
+  ],
+  "conclusaoFinal": "A flexibilidade tornou-se um atributo cada vez mais relevante para a segurança e a eficiência do SIN. Os resultados do estudo apontam para a necessidade de avançar de forma gradual e coordenada na sua mensuração, valoração, contratação e remuneração, acompanhando continuamente a evolução das necessidades do sistema e assegurando a disponibilidade dos recursos adequados nos horizontes e locais em que forem necessários."
+}

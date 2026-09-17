@@ -1,0 +1,71 @@
+{
+  "id": "unit-commitment",
+  "numero": 4,
+  "titulo": "Unit Commitment Hidráulico (UCH)",
+  "tagline": "Diferenças entre o despacho representado pelo DESSEM e a operação observada das hidrelétricas revelam oportunidades de aprimoramento da modelagem.",
+  "introducao": "O DESSEM é utilizado na programação diária da operação do SIN, mas o despacho resultante do modelo pode diferir da programação e da operação observadas das hidrelétricas. O estudo investigou as principais causas dessas diferenças e avaliou, em particular, o papel do Unit Commitment Hidráulico (UCH), que representa aspectos da operação das unidades geradoras e suas restrições.",
+  "glossario": [
+    { "termo": "DESSEM - Modelo de Despacho Hidrotérmico de Curtíssimo Prazo:", "definicao": "Modelo utilizado para definir a programação da operação do sistema elétrico no curtíssimo prazo, determinando como os recursos de geração devem ser utilizados para atender à demanda, considerando suas restrições operativas." },
+    { "termo": "PDP - Programação Diária da Operação", "definicao": "Programação definida pelo ONS para orientar a operação do SIN no dia seguinte, incluindo a geração programada para as usinas e as condições operativas a serem observadas." },
+    { "termo": "Unit Commitment Hidráulico (UCH)", "definicao": "Representação, no DESSEM, das condições de operação das unidades geradoras de uma usina hidrelétrica, considerando quais unidades estão ligadas ou desligadas e suas restrições operativas, como zonas proibidas de operação." },
+    { "termo": "Zona proibida de geração", "definicao": "Uma faixa de potência em que uma unidade geradora não pode operar de forma estável, por razões técnicas (geralmente ligada a vibração mecânica ou cavitação)." },
+    { "termo": "Reotimização pós-DESSEM", "definicao": "Nova otimização do despacho após a execução do DESSEM, incorporando restrições operativas adicionais, como as zonas proibidas de geração, para avaliar seus efeitos sobre a programação das hidrelétricas." }
+  ],
+  "kpis": [
+    { "label": "Participação do UCH nas diferenças classificadas pelo ONS", "valor": "0,2%", "contexto": "1 dos 451 casos classificados fora da faixa de tolerância pelo ONS (out/2024–mai/2025)", "tendencia": "baixo" },
+    { "label": "Participação das políticas operativas nas diferenças classificadas", "valor": "92,2%", "contexto": "Principal causa identificada no levantamento do ONS.", "tendencia": "alto" },
+    { "label": "Redução das violações de zonas proibidas após reotimização", "valor": "-90,2%", "contexto": "de 1.117 para 110 violações no caso-teste analisado", "tendencia": "positivo" },
+    { "label": "Energia deslocada pela reotimização", "valor": "29,3 GWh", "contexto": "Equivalente a 2,16% da energia total do caso analisado.", "tendencia": "baixo" }
+  ],
+  "charts": {
+    "classificacaoONS": {
+      "titulo": "O que realmente explica as diferenças entre o DESSEM e a operação real?",
+      "descricao": "Classificação dos casos analisados entre outubro de 2024 e maio de 2025, excluindo os casos dentro da faixa de tolerância.",
+      "series": [
+        { "categoria": "Política operativa", "ocorrencias": 416, "participacao": 92.2 },
+        { "categoria": "Modelagem", "ocorrencias": 22, "participacao": 4.9 },
+        { "categoria": "Itaipu", "ocorrencias": 8, "participacao": 1.8 },
+        { "categoria": "Restrições hidráulicas", "ocorrencias": 2, "participacao": 0.4 },
+        { "categoria": "Previsão de vazões", "ocorrencias": 2, "participacao": 0.4 },
+        { "categoria": "Unit Commitment", "ocorrencias": 1, "participacao": 0.2 }
+      ]
+    },
+    "reotimizacao": {
+      "titulo": "Efeito da reotimização pós-DESSEM (caso subsistema Sul, 10/04/2025)",
+      "itens": [
+        { "indicador": "Violações de zona proibida", "antes": "1.117", "depois": "110", "variacao": "-90,2%" },
+        { "indicador": "Energia deslocada", "antes": "—", "depois": "29,3 GWh", "variacao": "2,16% do total do caso" },
+        { "indicador": "Volume de reservatórios alterado (Sudeste)", "antes": "—", "depois": "0,01%", "variacao": "impacto mínimo" },
+        { "indicador": "Volume de reservatórios alterado (Sul)", "antes": "—", "depois": "0,15%", "variacao": "impacto mínimo" }
+      ]
+    }
+  },
+  "secoes": [
+    {
+      "titulo": "Como o estudo foi estruturado",
+      "texto": "A análise foi desenvolvida em duas frentes. Primeiro, foram investigadas as diferenças entre os resultados do DESSEM, a programação e a operação observada das hidrelétricas. Em seguida, foi realizado um teste isolado do UCH, reotimizando o despacho para incorporar de forma mais adequada as zonas proibidas de operação e avaliar seu impacto sobre a solução."
+    },
+    {
+      "titulo": "Estudo de caso: a UHE Batalha",
+      "texto": "Os perfis médios horários mostram maior modulação da geração no DESSEM do que na PDP e na operação observada, especialmente aos finais de semana. Esse comportamento motivou a investigação do efeito das zonas proibidas de operação e da representação do UCH sobre o despacho da UHE Batalha."
+    },
+    {
+      "titulo": "Qual é o papel do UCH nas diferenças observadas?",
+      "tipo": "callout",
+      "texto": "O UCH melhora a representação física do despacho, especialmente ao incorporar restrições como zonas proibidas de operação, mas não explica sozinho as diferenças entre o DESSEM e a operação observada. Os resultados indicam que fatores operativos, dados de entrada e outros aspectos da modelagem têm papel mais relevante nessas diferenças."
+    },
+    {
+      "titulo": "Recomendações para aumentar a aderência do DESSEM à operação observada",
+      "tipo": "lista",
+      "itens": [
+        { "titulo": "Reavaliar a capacidade de regularização diária das UHEs", "texto": "Revisar a classificação das usinas e sua capacidade efetiva de variar a geração ao longo do dia, considerando restrições operativas, geração mínima e limites de rampa." },
+        { "titulo": "Aprimorar a projeção dos volumes iniciais dos reservatórios", "texto": "Compatibilizar as relações cota-área-volume utilizadas no RDH/HO e no DESSEM, aprimorando a representação das condições iniciais dos reservatórios." },
+        { "titulo": "Aprimorar a representação dos níveis operativos das UHEs", "texto": "Adequar os dados de entrada do DESSEM às situações em que os níveis de montante estão acima ou abaixo das faixas normais de operação." },
+        { "titulo": "Aprimorar a projeção de carga da ANDE", "texto": "Incorporar informações mais recentes de suprimento e demanda, antecipando ou viabilizando a obtenção das previsões para D+1 e D+2." },
+        { "titulo": "Aprimorar a representação das restrições operativas das UHEs", "texto": "Revisar, usina a usina, as restrições consideradas no DESSEM, incluindo geração mínima, limites de rampa, vazões e demais restrições operativas." },
+        { "titulo": "Aprimorar a representação do UCH no DESSEM", "texto": "Atualizar as informações sobre zonas proibidas de operação e unidades geradoras sincronizadas, aumentando a aderência às condições físicas das UHEs e preservando a eficiência computacional e a reprodutibilidade dos resultados." }
+      ]
+    }
+  ],
+  "conclusaoFinal": "Aprimorar a aderência entre o DESSEM e a operação observada requer mais do que aumentar o detalhamento do UCH. Os resultados apontam para a importância de aprimorar conjuntamente dados de entrada, premissas, restrições operativas e a representação física das hidrelétricas. O UCH contribui para tornar o despacho mais aderente às restrições físicas, mas não constitui, isoladamente, a principal explicação para as diferenças observadas."
+}

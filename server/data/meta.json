@@ -1,0 +1,56 @@
+{
+  "projeto": {
+    "titulo": "Otimização da Flexibilidade e Critérios de Rateio de Custos e Benefícios no Sistema Elétrico",
+    "subtitulo": "A transformação do sistema elétrico brasileiro aumenta a necessidade de flexibilidade e traz um novo desafio: medir, valorar e remunerar adequadamente esse atributo.",
+    "resumo": "O projeto reúne análises e propostas para aprimorar a gestão da flexibilidade do SIN, valorar seus custos e benefícios e desenvolver mecanismos de remuneração e rateio que incentivem o seu adequado provimento, com atenção ao papel das hidrelétricas.",
+    "data": "Setembro de 2026",
+    "local": "São Paulo",
+    "executoras": ["MRTS Consultoria","Ampere Consultoria","HPPA"],
+    "financiadoras": ["Instituto Clima e Sociedade (iCS)", "Crux Alliance", "Instituto E+ Transição Energética"],
+    "contato": "contato@mrtsconsultoria.com"
+  },
+  "resultadosCentrais": [
+    {
+      "numero": 1,
+      "id": "diagnostico",
+      "titulo": "Diagnóstico da flexibilidade do SIN",
+      "resumo": "A evolução das rampas do sistema, o crescente esforço das hidrelétricas e os riscos de insuficiência de flexibilidade até 2030.",
+      "icone": "activity"
+    },
+    {
+      "numero": 2,
+      "id": "valoracao",
+      "titulo": "Valoração da flexibilidade",
+      "resumo": "Quanto vale para o sistema a flexibilidade fornecida pelas hidrelétricas e quais custos de expansão e operação essa contribuição ajuda a evitar.",
+      "icone": "coins"
+    },
+    {
+      "numero": 3,
+      "id": "remuneracao",
+      "titulo": "Proposta de remuneração da flexibilidade",
+      "resumo": "Uma proposta de contratação e remuneração da flexibilidade, combinando pagamentos por disponibilidade e acionamento e reconhecendo as características dos diferentes provedores.",
+      "icone": "handshake"
+    },
+    {
+      "numero": 4,
+      "id": "unit-commitment",
+      "titulo": "Unit Commitment Hidráulico (UCH)",
+      "resumo": "O que explica as diferenças entre o despacho das hidrelétricas representado pelo DESSEM e a programação e operação observadas, e qual o papel do UCH nesses desvios.",
+      "icone": "git-compare"
+    },
+    {
+      "numero": 5,
+      "id": "servicos-ancilares",
+      "titulo": "Serviços ancilares e resiliência operacional",
+      "resumo": "Como o crescimento da geração solar e eólica altera os requisitos de resiliência operativa do SIN, e como identificar, medir e contratar os serviços necessários para manter a segurança operativa.",
+      "icone": "shield"
+    },
+    {
+      "numero": 6,
+      "id": "politicas",
+      "titulo": "Recomendações e plano de implementação",
+      "resumo": "Recomendações e um plano de implementação para traduzir os resultados do estudo em aprimoramentos regulatórios e de mercado para a gestão da flexibilidade no SIN.",
+      "icone": "map"
+    }
+  ]
+}

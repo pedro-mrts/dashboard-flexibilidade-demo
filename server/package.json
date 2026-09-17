@@ -1,0 +1,15 @@
+{
+  "name": "dashboard-flexibilidade-server",
+  "version": "1.0.0",
+  "description": "API Node/Express que serve os dados dos 6 paineis do Dashboard do Projeto de Flexibilidade do SIN.",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}

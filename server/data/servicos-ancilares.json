@@ -1,0 +1,82 @@
+{
+  "id": "servicos-ancilares",
+  "numero": 5,
+  "titulo": "Serviços ancilares e resiliência operacional",
+  "tagline": "O crescimento da geração solar e eólica, predominantemente conectada à rede por inversores Grid Following (GFL), reduz a provisão natural de alguns atributos de resiliência operativa, aumentando a necessidade de identificá-los, quantificá-los e, quando necessário, contratá-los explicitamente.",
+  "introducao": "Geradores síncronos, como hidrelétricas e térmicas, contribuem naturalmente para atributos importantes à resiliência operativa da rede, como inércia, suporte de tensão e regulação de frequência. Já as fontes conectadas por inversores, como solar e eólica, em sua configuração predominante atual, não fornecem necessariamente esses mesmos atributos de forma inerente. O estudo avaliou como medir essas necessidades e quais mecanismos podem ser utilizados para garantir seu adequado provimento.",
+  "glossario": [
+    {"termo": "Resiliência Operativa", "definicao": "Capacidade de resposta a perturbações e variações rápidas (milissegundos a minutos), com provimento via Controle de Carga x Frequência (resposta automática)." },
+    { "termo": "IBR", "definicao": "Inverter-Based Resources — recursos de geração baseados em inversores eletrônicos, como usinas solares e eólicas, em vez de geradores girantes tradicionais." },
+    { "termo": "Inversor Grid Following (GFL)", "definicao": "O tipo de inversor mais comum hoje em usinas solares e eólicas. Ele precisa de uma rede elétrica já estável para funcionar, pois se comporta como uma fonte de corrente que segue a tensão e frequência existentes." },
+    { "termo": "Inversor Grid Forming (GFM)", "definicao": "Um tipo de inversor mais avançado (usado principalmente em baterias) que se comporta como uma fonte de tensão, ajudando a formar e sustentar a tensão e a frequência da rede, de forma parecida com um gerador síncrono tradicional." },
+    { "termo": "Inércia", "definicao": "Capacidade do sistema elétrico de resistir a variações rápidas de frequência após uma perturbação. É tradicionalmente fornecida pela energia armazenada nas massas girantes dos geradores síncronos, ajudando a limitar a velocidade inicial de variação da frequência." },
+    { "termo": "RoCoF", "definicao": "Rate of Change of Frequency — a velocidade com que a frequência do sistema elétrico varia após uma perturbação. Quanto menos inércia o sistema tem, mais rápida (e perigosa) é essa variação." },
+    { "termo": "Regulação primária de frequência", "definicao": "A resposta automática e rápida (em segundos) de geradores e outros recursos para conter variações na frequência do sistema após um desequilíbrio entre geração e consumo." },
+    { "termo": "Suporte dinâmico de tensão", "definicao": "A capacidade de um recurso de ajudar a sustentar a tensão elétrica em uma região, especialmente durante perturbações rápidas na rede." }
+  ],
+  "kpis": [
+    { "label": "Redução na taxa de variação de tensão com compensador síncrono", "valor": "-29%", "contexto": "De -4,235 V/s para -2,991 V/s, em uma contingência simulada no Nordeste (João Câmara 500 kV)", "tendencia": "positivo" },
+    { "label": "Participação de recursos baseados em inversores associada à aproximação do limite crítico do Índice de Inércia", "valor": "~35%", "contexto": "Faixa de segurança sugerida pelo estudo: índice entre 2 e 3", "tendencia": "alerta" },
+    { "label": "Faixa observada do mérito de resposta de frequência das hidrelétricas", "valor": "0,15–2,5 pu/s", "contexto": "Desempenho superior ao observado para fontes eólicas e solares nos casos avaliados pelo estudo.", "tendencia": "positivo" }
+  ],
+  "charts": {
+    "gflVsGfm": {
+      "titulo": "Grid Following e Grid Forming: diferentes capacidades de suporte à rede",
+      "colunas": ["Característica", "Grid Following (GFL)", "Grid Forming (GFM)"],
+      "linhas": [
+        ["Comportamento simplificado", "Fonte de corrente", "Fonte de tensão"],
+        ["Referência para operar", "Depende da tensão/frequência da rede", "Ajuda a formar a tensão/frequência da rede"],
+        ["Operação em rede fraca", "Maior sensibilidade (mais difícil)", "Maior capacidade de sustentação"],
+        ["Inércia", "Não fornece naturalmente", "Pode fornecer inércia sintética"],
+        ["Controle dinâmico de tensão", "Limitado", "Rápido e efetivo"],
+        ["Regulação primária de frequência", "Limitada / depende de controle", "Pode contribuir de forma rápida"],
+        ["Aplicações típicas", "Eólicas e fotovoltaicas atuais", "BESS e outras aplicações com requisitos específicos de suporte à rede"]
+      ]
+    },
+    "servicosPorNatureza": {
+      "titulo": "Cada serviço de resiliência operativa possui requisitos distintos de localização e tempo de resposta",
+      "linhas": [
+        { "servico": "Controle dinâmico de tensão", "escopo": "Local", "velocidade": "Milissegundos a segundos", "recursos": "Geradores/compensadores síncronos, baterias GFM" },
+        { "servico": "Inércia / RoCoF", "escopo": "Sistêmica", "velocidade": "Instantânea (primeiro segundo)", "recursos": "Geradores síncronos com volante, baterias GFM" },
+        { "servico": "Estabilidade angular", "escopo": "Regional / local", "velocidade": "Instantânea (primeiros ciclos)", "recursos": "Geradores síncronos e recursos GFM" },
+        { "servico": "Regulação primária de frequência", "escopo": "Sistêmica", "velocidade": "Segundos", "recursos": "Hidrelétricas, térmicas, baterias, reversíveis" }
+      ]
+    },
+    "casoNordeste": {
+      "titulo": "Estudo de caso: contingência em João Câmara (500 kV), Nordeste",
+      "series": [
+        { "cenario": "Caso base (suporte insuficiente)", "valor": -4.235, "unidade": "V/s" },
+        { "cenario": "Com compensador síncrono em Touros-RN", "valor": -2.991, "unidade": "V/s" }
+      ],
+      "nota": "A instalação do compensador síncrono em Touros reduziu a taxa de variação da tensão de −4,235 V/s para −2,991 V/s no caso simulado. O resultado evidencia que a contribuição de um recurso para o controle de tensão depende não apenas de sua capacidade, mas também de sua localização elétrica."
+    }
+  },
+  "secoes": [
+    {
+      "titulo": "O que está mudando no sistema",
+      "texto": "A crescente participação de recursos conectados por inversores, predominantemente Grid Following (GFL), reduz a provisão inerente de atributos tradicionalmente fornecidos por geradores síncronos, como inércia, corrente de curto-circuito, suporte dinâmico de tensão e regulação primária de frequência. Com a transformação da matriz, torna-se necessário identificar e quantificar esses atributos e, quando necessário, estabelecer mecanismos para sua contratação explícita."
+    },
+    {
+      "titulo": "Dois conceitos-chave para entender a proposta",
+      "tipo": "lista",
+      "itens": [
+        { "titulo": "Mérito", "texto": "Capacidade técnica de um recurso de prestar determinado serviço, considerando a intensidade e a qualidade de sua resposta." },
+        { "titulo": "Efetividade", "texto": "Capacidade da resposta de um recurso de atender à necessidade do sistema, considerando onde o serviço é requerido e a localização elétrica do recurso." }
+      ]
+    },
+    {
+      "titulo": "Experiência internacional na contratação de resiliência operativa",
+      "texto": "Sistemas elétricos com elevada participação de recursos conectados por inversores já adotam mecanismos específicos para assegurar atributos de resiliência operativa. As experiências internacionais analisadas incluem requisitos e mecanismos de contratação para suporte de tensão, system strength, capacidade Grid Forming, inércia e regulação de frequência."
+    },
+    {
+      "titulo": "Três frentes para avaliar e assegurar a resiliência operativa no SIN",
+      "tipo": "lista",
+      "itens": [
+        { "titulo": "Controle dinâmico de tensão", "texto": "Identificar onde há necessidade de suporte dinâmico de tensão e avaliar quais recursos são mais efetivos para atendê-la, considerando sua localização elétrica." },
+        { "titulo": "Inércia e estabilidade angular", "texto": "Avaliar a suficiência de inércia do sistema por meio do RoCoF e do Índice de Inércia, identificando situações e regiões com maior necessidade de suporte." },
+        { "titulo": "Regulação primária de frequência", "texto": "Quantificar a capacidade de resposta dos recursos e sua contribuição efetiva para a regulação de frequência, considerando seu mérito técnico e a reserva disponível (headroom)." }
+      ]
+    }
+  ],
+  "conclusaoFinal": "A segurança operativa do SIN exige não apenas disponibilidade de serviços ancilares, mas que esses serviços sejam prestados com a efetividade necessária nos locais e momentos em que o sistema precisa. Para isso, é necessário identificar os requisitos técnicos, quantificar as necessidades, avaliar o mérito e a efetividade dos recursos e, a partir desses resultados, estruturar mecanismos adequados de contratação e remuneração."
+}
